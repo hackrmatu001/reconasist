@@ -28,5 +28,20 @@ El flujo de trabajo es completamente determinista y estructurado:
 
 ### 1. Requisitos del Sistema
 Asegúrate de tener instaladas las herramientas nativas de red en tu sistema (especialmente si usas Kali Linux, ya vendrán integradas):
-```bash
+
+### Instalar las librerías necesarias
 sudo apt update && sudo apt install nmap whois -y
+pip install langchain-groq langgraph langchain-core langchain-community langchain-text-splitters sentence-transformers chromadb python-dotenv
+
+### Crea un archivo .env en la raíz del proyecto y añade tu API key de Groq
+GROQ_API_KEY=tu_api_key_aqui
+
+### Para arrancar el agente de seguridad, simplemente ejecuta el script principal
+python recon_asistido.py
+
+---
+
+## ⚖️ Descargo de Responsabilidad (Disclaimer)
+
+##### Este software fue desarrollado exclusivamente con fines educativos, de investigación académica y para su ejecución en entornos de auditoría controlados bajo autorización explícita (Laboratorios o entornos autorizados). El uso no autorizado de este script contra infraestructuras ajenas es ilegal y está penado por las leyes de delitos informáticos internacionales. El autor no se hace responsable del mal uso o de los daños causados por esta herramienta.
+
